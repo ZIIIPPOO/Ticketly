@@ -1,5 +1,5 @@
-function affichage(index){
-    if(index == 1)
+function affichage(i){
+    if(i == 1)
     {
         document.getElementById('s2').style.display='block';
         document.getElementById('s1').style.display='none';
@@ -10,7 +10,7 @@ function affichage(index){
         document.getElementById('s1').style.display='block';
     }
 }
-let counteur =0
+let counteur =1;
 function ctr() {
     if(counteur < 500){
     counteur++
@@ -24,7 +24,16 @@ function decr() {
     document.getElementById('ctrn').innerHTML=counteur
     }
 }
-let store;
-function store(index){
+function store(button){
+    const div = button.parentElement;
+    
+    const title = div.querySelector('h2').innerHTML;
+    const info = div.querySelector('.infos p').innerHTML;
+    const price = div.querySelector('.selected-event div p').innerHTML;
 
+
+    document.querySelector('.total-price p').innerHTML = price;
+    document.querySelector('.selected-event h2').innerHTML = title;
+    document.querySelector('.selected-event div p').innerHTML = info;
+    
 }
