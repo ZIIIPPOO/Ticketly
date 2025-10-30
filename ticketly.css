@@ -1,0 +1,282 @@
+
+body {
+    background: #283048;
+    background: -webkit-linear-gradient(to right, #859398, #283048);
+    background: linear-gradient(to right, #859398, #283048);
+
+}
+
+.steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 51px;
+    position: relative;
+    top: 0;
+    padding: 40px 0;
+}
+
+.steps p {
+    background-color: #D1D5DB;
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.text-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-small;
+}
+
+
+.fst {
+    width: 325px;
+    height: 342px;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ;
+    position: relative;
+}
+
+.up {
+    position: relative;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.step.active>div {
+    gap: 40px;
+}
+.step.active{
+    margin-top: -20px
+}
+
+.down {
+    position: relative;
+    margin-top: 40px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.fst {
+    background-color: #D9D9D9;
+}
+
+.fst>h2 {
+    font-family: "Jaro", sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+    margin-top: 5px;
+}
+
+.infos {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.infos p {
+    text-indent: 3px;
+}
+
+.current-page p {
+    background-color: #2563EB;
+}
+.s1{
+    display: none;
+}
+
+.step.active button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #24A0ED;
+    padding: 5px;
+    border: none;
+    font-family: "Jaro", sans-serif;
+    border-radius: 10px;
+    padding: 0 20px 0px 20px;
+    font-size: x-large;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #24A0ED;
+    background-color: black;
+    transition: 1s;
+
+}
+.s2 header{
+
+}
+
+.button-amount {
+    display: flex;
+}
+
+.tickets-number{
+    width: 991px;
+    height: 704px;
+    border: 1px solid black;
+    margin: 84px auto;
+    background-color: white;
+    border-radius: 20px;
+    padding-left: 25px;
+
+}
+.tickets-number > h2{
+    font-weight: bold;
+    font-size: xx-large;
+}
+.selected-event{
+    width: 940px;
+    height: 168px;
+    border-radius: 8px;
+    background-color: #F9FAFB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.incre-decre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 100px;
+}
+.signs{
+    padding: 10px;
+    width: 75px;
+    height: 75px;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.incre-decre :nth-child(1){
+    background-color: #E5E7EB;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.incre-decre :nth-child(3){
+    background-color: #E5E7EB;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.incre-decre :nth-child(2){
+    font-size: 120px;
+    margin-bottom: 15px;
+}
+.total-price{
+    width: 940px;
+    height: 84px;
+    background-color: #EFF6FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+.step.hidden{
+    display: none;
+}
+.total-price :nth-child(2){
+    color: #2563EB;
+    font-size: 25px;
+    font-weight: bold;
+}
+.prev-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0px 0px;
+}
+.prev-con button{
+    height: 50px;
+    width: 115px;
+    color: white;
+    border-radius: 8px;
+}
+.prev-con :nth-child(1){
+    background-color: #8D8888;
+}
+.prev-con :nth-child(2){
+    background-color: #2563EB;
+}
+
+@media (max-width: 600px) {
+    .steps {
+        flex-direction: column;
+        gap: 20px;
+        top: -20px;
+    }
+
+    .steps img {
+        display: none;
+    }
+
+    .steps p {
+        padding: 15px;
+    }
+
+    .text-step {
+        font-size: xx-small;
+    }
+
+    .up,
+    .down {
+        flex-direction: column;
+        top: -20px;
+        gap: 30px;
+    }
+
+    .down {
+        margin-top: 20px;
+    }
+
+    .fst {
+        width: 95%;
+        max-width: 325px;
+        height: auto;
+        min-height: 342px;
+    }
+
+    .fst>h2 {
+        font-size: x-large;
+    }
+
+    .infos p {
+        font-size: small;
+    }
+
+    .step.active>div {
+        gap: 30px;
+    }
+
+    .step.active button {
+        font-size: large;
+        padding: 0 15px;
+    }
+}
