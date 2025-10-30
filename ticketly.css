@@ -127,8 +127,9 @@ button:hover {
     transition: 1s;
 
 }
-.s2 header{
-
+.logo{
+    position: absolute;
+    left: 0;
 }
 
 .button-amount {
@@ -139,7 +140,7 @@ button:hover {
     width: 991px;
     height: 704px;
     border: 1px solid black;
-    margin: 84px auto;
+    margin: -10px auto;
     background-color: white;
     border-radius: 20px;
     padding-left: 25px;

@@ -20,7 +20,7 @@
 <body>
     <section id="s1" class="step active ">
         <header class="steps">
-            <img width="150" src="images/final logo.png" alt="">
+            <img class="logo" width="150" src="images/final logo.png" alt="">
             <div class="text-step">
                 <div class="current-page">
                     <p>1</p>
@@ -51,7 +51,7 @@
                     <p>📆 June 20, 2026 <br>🗺️ Youcode, Youssoufia <br>💺 500 seats available<br>100$</p>
                 </div>
                 <div></div>
-                <button onclick="affichage(1)" class="book">Book</button>
+                <button onclick="affichage(1), store(1)" class="book">Book</button>
             </div>
             <div class="fst">
                 <img src="images/return of phantom 1.png" alt="">
@@ -60,7 +60,7 @@
                     <p>📆 June 20, 2026 <br>🗺️ Youcode, Youssoufia <br>💺 500 seats available <br>100$</p>
                 </div>
                 <div></div>
-                <button onclick="affichage()" class="book">Book</button>
+                <button onclick="affichage(1), store(2)" class="book">Book</button>
             </div>
             <div class="fst">
                 <img src="images/Summer-Beats-Foto 1.png" alt="">
@@ -69,7 +69,7 @@
                     <p>📆 June 20, 2026 <br>🗺️ Youcode, Youssoufia <br>💺 500 seats available<br>100$</p>
                 </div>
                 <div></div>
-                <button onclick="affichage(3)" class="book">Book</button>
+                <button onclick="affichage(1), store(3)" class="book">Book</button>
             </div>
         </div>
         <div class="down">
@@ -79,7 +79,7 @@
                 <div class="infos">
                     <p>📆 June 20, 2026 <br>🗺️ Youcode, Youssoufia <br>💺 500 seats available<br>100$</p>
                 </div>
-                <button onclick="affichage(4)" class="book">Book</button>
+                <button onclick="affichage(1), store(4)" class="book">Book</button>
             </div>
             <div class="fst">
                 <img src="images/ucl 1.png" alt="">
@@ -87,7 +87,7 @@
                 <div class="infos">
                     <p>📆 June 20, 2026 <br>🗺️ Youcode, Youssoufia <br>💺 500 seats available<br>100$</p>
                 </div>
-                <button onclick="affichage(5)" class="book">Book</button>
+                <button onclick="affichage(1), store(5)" class="book">Book</button>
             </div>
             <div class="fst">
                 <img src="images/twow 1.png" alt="">
@@ -95,7 +95,7 @@
                 <div class="infos">
                     <p>📆 June 20, 2026 <br>🗺️ Youcode, Youssoufia <br>💺 500 seats available<br>100$</p>
                 </div>
-                <button onclick="affichage(6)" class="book">Book</button>
+                <button onclick="affichage(1), store(6)" class="book">Book</button>
             </div>
         </div>
     </section>
@@ -132,19 +132,42 @@
                 </div>
             </div>
             <div class="incre-decre">
-                <button class="signs">-</button>
-                <p>1</p>
-                <button class="signs">+</button>
+                <button onclick="decr()" class="signs">-</button>
+                <p id="ctrn">1</p>
+                <button onclick="ctr()" class="signs">+</button>
             </div>
             <div class="total-price">
                 <p>Total Price:</p>
                 <p>$149</p>
             </div>
             <div class="prev-con">
-                <button>Previous</button>
+                <button onclick="affichage(2)">Previous</button>
                 <button>Continue</button>
             </div>
         </div>
+        <header class="steps">
+            <div class="text-step">
+                <p>1</p>
+                <h4>Select Event</h4>
+            </div>
+            <img height="4" src="images/Container.png" alt="">
+            <div class="text-step">
+                    <p>2</p>
+                    <h4>Choose Tickets</h4>
+            </div>
+            <img height="4" src="images/Container.png" alt="">
+            <div class="text-step">
+                <div class="current-page">
+                    <p>3</p>
+                    <h4>Add Participants</h4>
+                </div>
+            </div>
+            <img height="4" src="images/Container.png" alt="">
+            <div class="text-step">
+                <p>4</p>
+                <h4>Confirm Booking</h4>
+            </div>
+        </header>
     </section>
 </body>
 
