@@ -88,9 +88,6 @@ body {
     left: 20px;
 }
 
-.infos p {
-    text-indent: 3px;
-}
 
 .current-page p {
     background-color: #2563EB;
@@ -115,9 +112,13 @@ body {
 
 button:hover {
     cursor: pointer;
-    color: #24A0ED;
+}
+.price{
+    font-weight: bold;
+}
+.step.active .book:hover {
     background-color: black;
-
+    color: #24A0ED;
 }
 
 .logo {
@@ -530,9 +531,8 @@ input::placeholder {
 
 @media (max-width: 600px) {
     .steps {
-        flex-direction: column;
         gap: 20px;
-        top: -20px;
+        padding: 20px 0;
     }
 
     .steps img {
@@ -541,44 +541,130 @@ input::placeholder {
 
     .steps p {
         padding: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
     }
 
     .text-step {
-        font-size: xx-small;
+        font-size: small;
+    }
+
+    .text-step h4 {
+        margin-top: 5px;
     }
 
     .up,
     .down {
         flex-direction: column;
-        top: -20px;
+        align-items: center;
         gap: 30px;
-    }
-
-    .down {
         margin-top: 20px;
     }
 
+    .down {
+        margin-top: 30px;
+    }
+
     .fst {
-        width: 95%;
+        width: 90%;
         max-width: 325px;
         height: auto;
         min-height: 342px;
     }
 
-    .fst>h2 {
+    .fst > h2 {
         font-size: x-large;
+    }
+
+    .infos {
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
     }
 
     .infos p {
         font-size: small;
     }
 
-    .step.active>div {
-        gap: 30px;
-    }
-
     .step.active button {
         font-size: large;
-        padding: 0 15px;
+        padding: 5px 15px;
+    }
+
+    .step.active > div {
+        gap: 30px;
+    }
+        .tickets-number {
+        width: 95%;
+        max-width: 100%;
+        height: auto;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .tickets-number > h2 {
+        font-size: large;
+        margin-bottom: 15px;
+    }
+
+    .selected-event {
+        width: 100%;
+        height: auto;
+        min-height: 120px;
+        padding: 15px;
+    }
+
+    .selected-event h2 {
+        font-size: medium;
+        margin-bottom: 8px;
+    }
+
+    .selected-event div p {
+        font-size: x-small;
+        line-height: 1.4;
+    }
+
+    .incre-decre {
+        margin-top: 40px;
+        gap: 15px;
+    }
+
+    .signs {
+        width: 55px;
+        height: 55px;
+        font-size: 40px;
+        padding: 5px;
+    }
+
+    .incre-decre :nth-child(2) {
+        font-size: 70px;
+        margin-bottom: 10px;
+    }
+
+    .total-price {
+        width: 100%;
+        height: auto;
+        padding: 12px;
+    }
+
+    .total-price p:first-child {
+        font-size: 14px;
+    }
+
+    .total-price :nth-child(2) {
+        font-size: 20px;
+    }
+
+    .prev-con {
+        flex-direction: row;
+        gap: 10px;
+        padding: 15px 0;
+    }
+
+    .prev-con button {
+        width: 48%;
+        height: 40px;
+        font-size: 14px;
     }
 }

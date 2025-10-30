@@ -48,7 +48,10 @@
                 <img src="images/comedy 1.png" alt="">
                 <h2>Stand Up</h2>
                 <div class="infos">
-                    <p>📆 5 February, 2026 <br>🗺️ Théâtre Royal, Marrakech <br>💺 300 seats available<br>50$</p>
+                    <p>📆 5 February, 2026</p>
+                    <p>🗺️ Théâtre Royal, Marrakech</p>
+                    <p>💺 300 seats available</p>
+                    <p class="price">50$</p>
                 </div>
                 <div></div>
                 <button onclick="affichage(1); store(this)" class="book">Book</button>
@@ -57,7 +60,10 @@
                 <img src="images/return of phantom 1.png" alt="">
                 <h2>Phantom Return</h2>
                 <div class="infos">
-                    <p>📆 1 January, 2026 <br>🗺️ Megarama, Marrakech <br>💺 100 seats available <br>7$</p>
+                    <p>📆 1 January, 2026</p>
+                    <p>🗺️ Megarama, Marrakech</p>
+                    <p>💺 100 seats available</p>
+                    <p class="price">7$</p>
                 </div>
                 <div></div>
                 <button onclick="affichage(1); store(this)" class="book">Book</button>
@@ -66,7 +72,10 @@
                 <img src="images/Summer-Beats-Foto 1.png" alt="">
                 <h2>Music Festival</h2>
                 <div class="infos">
-                    <p>📆 3 December, 2025 <br>🗺️ Verdure, Agadir <br>💺 150 seats available<br>10$</p>
+                    <p>📆 3 December, 2025</p>
+                    <p>🗺️ Verdure, Agadir</p>
+                    <p>💺 150 seats available</p>
+                    <p class="price">10$</p>
                 </div>
                 <div></div>
                 <button onclick="affichage(1); store(this)" class="book">Book</button>
@@ -77,7 +86,10 @@
                 <img src="images/art 1.png" alt="">
                 <h2>Masterpieces</h2>
                 <div class="infos">
-                    <p>📆 June 20, 2026 <br>🗺️ Youcode, Youssoufia <br>💺 50 seats available<br>20$</p>
+                    <p>📆 June 20, 2026</p>
+                    <p>🗺️ Youcode, Youssoufia</p>
+                    <p>💺 50 seats available</p>
+                    <p class="price">20$</p>
                 </div>
                 <button onclick="affichage(1); store(this)" class="book">Book</button>
             </div>
@@ -85,7 +97,10 @@
                 <img src="images/ucl 1.png" alt="">
                 <h2>UCL Final</h2>
                 <div class="infos">
-                    <p>📆 30 May, 2026 <br>🗺️ Puskás Aréna, Hungary <br>💺 50000 seats available<br>500$</p>
+                    <p>📆 30 May, 2026</p>
+                    <p>🗺️ Puskás Aréna, Hungary</p>
+                    <p>💺 50000 seats available</p>
+                    <p class="price">500$</p>
                 </div>
                 <button onclick="affichage(1); store(this)" class="book">Book</button>
             </div>
@@ -93,7 +108,10 @@
                 <img src="images/twow 1.png" alt="">
                 <h2>The WOW</h2>
                 <div class="infos">
-                    <p>📆 June 20, 2026 <br>🗺️ Pathé , Casablanca <br>💺 200 seats available<br>20$</p>
+                    <p>📆 June 20, 2026</p>
+                    <p>🗺️ Pathé , Casablanca</p>
+                    <p>💺 200 seats available</p>
+                    <p class="price">20$</p>
                 </div>
                 <button onclick="affichage(1); store(this)" class="book">Book</button>
             </div>
@@ -134,7 +152,7 @@
             <div class="incre-decre">
                 <button onclick="decr()" class="signs">-</button>
                 <p id="ctrn">1</p>
-                <button onclick="ctr()" class="signs">+</button>
+                <button onclick="ctr(); increment_price()" class="signs">+</button>
             </div>
             <div class="total-price">
                 <p>Total Price:</p>
@@ -169,49 +187,49 @@
                     <h4>Confirm Booking</h4>
                 </div>
             </header>
-        <div class="card">
-            <h2 class="card-title">Add Participant Information</h2>
+            <div class="card">
+                <h2 class="card-title">Add Participant Information</h2>
 
-            <div class="form-section">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" placeholder="First Name">
+                <div class="form-section">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Last Name">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" placeholder="Last Name">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="youcode@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" placeholder="+212 6 XX XX XX XX">
+                        </div>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="youcode@gmail.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" placeholder="+212 6 XX XX XX XX">
+
+                <div class="participants-list">
+                    <h3>All Participants</h3>
+                    <div class="participant-item">
+                        <div class="participant-info">
+                            <h4>Youssef Bouloue</h4>
+                            <p>youss@gmail.com</p>
+                            <p>+212 6 XX XX XX</p>
+                        </div>
+                        <button class="remove-btn">Remove</button>
                     </div>
                 </div>
-            </div>
 
-            <div class="participants-list">
-                <h3>All Participants</h3>
-                <div class="participant-item">
-                    <div class="participant-info">
-                        <h4>Youssef Bouloue</h4>
-                        <p>youss@gmail.com</p>
-                        <p>+212 6 XX XX XX</p>
-                    </div>
-                    <button class="remove-btn">Remove</button>
+                <div class="prev-con">
+                    <button onclick="affichage(2)">Previous</button>
+                    <button>Continue</button>
                 </div>
             </div>
-
-            <div class="prev-con">
-                <button onclick="affichage(2)">Previous</button>
-                <button>Continue</button>
-            </div>
-        </div>
         </section>
 </body>
 
