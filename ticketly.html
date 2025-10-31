@@ -160,10 +160,11 @@
             </div>
             <div class="prev-con">
                 <button onclick="affichage(2)">Previous</button>
-                <button>Continue</button>
+                <button onclick="affichage(3)">Continue</button>
             </div>
         </div>
-        <section id="s3" class="step">
+    </section>
+        <section id="s3" class="step hidden">
             <header class="steps">
                 <div class="text-step">
                     <p>1</p>
@@ -213,21 +214,21 @@
                     </div>
                 </div>
 
-                <div class="participants-list">
+                <div id="pl" class="participants-list">
                     <h3>All Participants</h3>
                     <div class="participant-item">
                         <div class="participant-info">
-                            <h4>Youssef Bouloue</h4>
+                            <h4>Youssef Boudouar</h4>
                             <p>youss@gmail.com</p>
                             <p>+212 6 XX XX XX</p>
                         </div>
-                        <button class="remove-btn">Remove</button>
+                        <button onclick="remove()" class="remove-btn">Remove</button>
                     </div>
                 </div>
 
                 <div class="prev-con">
-                    <button onclick="affichage(2)">Previous</button>
-                    <button>Continue</button>
+                    <button onclick="affichage(4)">Previous</button>
+                    <button onclick="store_input()">Continue</button>
                 </div>
             </div>
         </section>

@@ -4,10 +4,20 @@ function affichage(i){
         document.getElementById('s2').style.display='block';
         document.getElementById('s1').style.display='none';
     }
-    else
+    else if(i == 2)
     {
         document.getElementById('s2').style.display='none';
         document.getElementById('s1').style.display='block';
+    }
+    else if(i == 3)
+    {
+        document.getElementById('s3').style.display='block';
+        document.getElementById('s2').style.display='none';
+    }
+    else if(i == 4)
+    {
+        document.getElementById('s3').style.display='none';
+        document.getElementById('s2').style.display='block';
     }
 }
 let counteur =1;
@@ -45,4 +55,21 @@ function increment_price(){
     let total = counteur * new_price;
 
     document.querySelector('.total-price p:nth-child(2)').innerHTML = total + '$';
+}
+
+function store_input(){
+    document.getElementById('pl').style.display='block';
+    let fname = document.getElementById('firstName').value
+    let lname = document.getElementById('lastName').value
+    let email = document.getElementById('email').value
+    let phone = document.getElementById('phone').value
+    let result = fname.concat(" ", lname);
+    document.querySelector(".participant-info h4").innerHTML = result;
+    document.querySelector(".participant-info :nth-child(2)").innerHTML = email;
+    document.querySelector(".participant-info :nth-child(3)").innerHTML = phone;
+    console.log(result);
+}
+function remove()
+{
+    document.getElementById('pl').style.display='none';
 }

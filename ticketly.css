@@ -93,13 +93,6 @@ body {
     background-color: #2563EB;
 }
 
-.s1 {
-    display: none;
-}
-#s3{
-    display: none;
-}
-
 .step.active button {
     position: absolute;
     bottom: 15px;
