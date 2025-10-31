@@ -86,3 +86,25 @@ function reset()
     document.getElementById('ctrn').innerHTML = 1;
     counteur = 1;
 }
+
+function addprtc(){
+   let fname = document.getElementById('firstName').value;
+    let lname = document.getElementById('lastName').value;
+    let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
+    
+    let fullname = fname + " " + lname;
+    
+    document.getElementById('pl').innerHTML += `
+        <div class="participant-item">
+            <div class="participant-info">
+                <h4>${fullname}</h4>
+                <p>${email}</p>
+                <p>${phone}</p>
+            </div>
+            <button onclick="remove()" class="remove-btn">Remove</button>
+        </div>
+    `;
+    
+    document.getElementById('pl').style.display = 'block';
+}
