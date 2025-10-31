@@ -230,6 +230,9 @@ button:hover {
 .prev-con :nth-child(2) {
     background-color: #2563EB;
 }
+.add{
+    background-color: green;
+}
 
 .card {
     height: 704px;
@@ -300,8 +303,12 @@ input::placeholder {
 
 .participants-list {
     margin-bottom: 25px;
+    overflow: scroll;
+    max-height: max-content;
+    display: block;
     display: none;
 }
+
 
 .participants-list h3 {
     font-size: 14px;
