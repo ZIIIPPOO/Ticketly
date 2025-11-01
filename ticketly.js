@@ -78,6 +78,7 @@ function remove(){
     document.getElementById('pl').style.display='none';
     i = 0;
     document.querySelector('.add').disabled = false;
+    document.querySelector('#button').disabled = true;
 }
 
 function reset()
@@ -87,6 +88,7 @@ function reset()
     i = 0;
     document.querySelector('.add').disabled = false;
     increment_price();
+    document.querySelector('#button').disabled = true;
 }
 let i = 0;
 const email_regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
@@ -125,6 +127,7 @@ function addprtc(){
 
     if(i === counteur) {
         document.querySelector('.add').disabled = true;
+        document.querySelector('#button').disabled = false; 
         return;
     }
     document.getElementById('firstName').value = '';

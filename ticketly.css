@@ -527,6 +527,11 @@ input::placeholder {
     cursor: not-allowed;
     opacity: 0.6;
 }
+#button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
 .summary-container {
     max-width: 800px;
     background: white;
