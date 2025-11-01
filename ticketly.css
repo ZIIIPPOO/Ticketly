@@ -783,4 +783,22 @@ input::placeholder {
         height: 40px;
         font-size: 14px;
     }
+    .card {
+    width: 95%;
+    padding: 20px;
+    margin: 10px auto;
+    }
+
+    .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    }
+
+
+    input {
+    padding: 10px;
+    font-size: 13px;
+    width: 100%;
+    }
 }
