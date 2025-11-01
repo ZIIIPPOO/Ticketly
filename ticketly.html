@@ -219,11 +219,78 @@
 
                 <div class="prev-con">
                     <button onclick="affichage(4) ; reset()">Previous</button>
-                    <button id="button" onclick="store_input()">Continue</button>
+                    <button id="button" onclick="affichage(6)">Continue</button>
                     <button onclick="addprtc()" class="add">Add</button>
                 </div>
             </div>
         </section>
+        <section id="s4" class="step hidden">
+    <header class="steps">
+        <div class="text-step">
+            <p>1</p>
+            <h4>Select Event</h4>
+        </div>
+        <img height="4" src="images/Container.png" alt="">
+        <div class="text-step">
+            <p>2</p>
+            <h4>Choose Tickets</h4>
+        </div>
+        <img height="4" src="images/Container.png" alt="">
+        <div class="text-step">
+            <p>3</p>
+            <h4>Add Participants</h4>
+        </div>
+        <img height="4" src="images/Container.png" alt="">
+        <div class="text-step">
+            <div class="current-page">
+                <p>4</p>
+            </div>
+            <h4>Confirm Booking</h4>
+        </div>
+    </header>
+
+    <div class="summary-container">
+        <h1 class="summary-title">Booking Summary</h1>
+
+        <div class="section">
+            <h2 class="section-title">Event Details</h2>
+            <div class="event-name">UCL FINAL</div>
+            <div class="detail-row">
+                <span>📅 Thursday, June 20, 2026</span>
+            </div>
+            <div class="detail-row">
+                <span>📍 Youcode, Youssoufia</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Ticket Information</h2>
+            <div class="ticket-info">
+                <span class="ticket-label">👥 Number of Tickets:</span>
+                <span class="ticket-value">1</span>
+            </div>
+            <div class="ticket-info">
+                <span class="ticket-label">💵 Price per Ticket:</span>
+                <span class="ticket-value">$911</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Participants</h2>
+            <div id="participants-summary"></div>
+        </div>
+
+        <div class="total-section">
+            <span class="total-label">Total Amount</span>
+            <span class="total-amount">$911</span>
+        </div>
+
+        <div class="button-group">
+            <button class="btn btn-previous" onclick="affichage(5)">Previous</button>
+            <button class="btn btn-confirm">Confirm Reservation</button>
+        </div>
+    </div>
+</section>
 </body>
 
 </html>

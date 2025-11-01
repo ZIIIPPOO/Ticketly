@@ -1,4 +1,5 @@
-document.getElementById('button').disabled = true;
+
+
 function affichage(i){
     if(i == 1)
     {
@@ -19,6 +20,14 @@ function affichage(i){
     {
         document.getElementById('s3').style.display='none';
         document.getElementById('s2').style.display='block';
+    }
+    else if(i == 5) {
+        document.getElementById('s4').style.display='none';
+        document.getElementById('s3').style.display='block';
+    }
+    else if(i == 6) {
+        document.getElementById('s4').style.display='block';
+        document.getElementById('s3').style.display='none';
     }
 }
 let new_price = 0;
@@ -64,21 +73,11 @@ function increment_price(){
     document.querySelector('.total-price p:nth-child(2)').innerHTML = total + '$';
 }
 
-function store_input(){
-    document.getElementById('pl').style.display='block';
-    let fname = document.getElementById('firstName').value
-    let lname = document.getElementById('lastName').value
-    let email = document.getElementById('email').value
-    let phone = document.getElementById('phone').value
-    let result = fname.concat(" ", lname);
-    document.querySelector(".participant-info h4").innerHTML = result;
-    document.querySelector(".participant-info :nth-child(2)").innerHTML = email;
-    document.querySelector(".participant-info :nth-child(3)").innerHTML = phone;
-    console.log(result);
-}
-function remove()
-{
+function remove(){
+    document.getElementById('pl').innerHTML = '';
     document.getElementById('pl').style.display='none';
+    i = 0;
+    document.querySelector('.add').disabled = false;
 }
 
 function reset()
@@ -90,14 +89,24 @@ function reset()
     increment_price();
 }
 let i = 0;
+const email_regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+const phone_regex = /^(\+2126\d{8}|06\d{8})$/
 function addprtc(){
     let fname = document.getElementById('firstName').value;
     let lname = document.getElementById('lastName').value;
-    let email = document.getElementById('email').value;
-    let phone = document.getElementById('phone').value;
+    let email = document.getElementById('email').value.trim();
+    let phone = document.getElementById('phone').value.trim();
     let fullname = fname + " " + lname;
 
-
+    
+    if (!email_regex.test(email)) {
+        alert('Please enter a valid email address');
+        return;
+    }
+    if (!phone_regex.test(phone)) {
+        alert('Please enter a valid phone number (+2126XXXXXXXX or 06XXXXXXXX)');
+        return;
+    }
     document.getElementById('pl').innerHTML += `
         <div class="participant-item">
             <div class="participant-info">
@@ -105,7 +114,7 @@ function addprtc(){
                 <p>${email}</p>
                 <p>${phone}</p>
             </div>
-            <button onclick="remove()" class="remove-btn">Remove</button>
+            <button onclick="remove()" class="remove">remove</button>
         </div>
     `;
     document.getElementById('pl').style.display = 'block';
@@ -118,5 +127,8 @@ function addprtc(){
         document.querySelector('.add').disabled = true;
         return;
     }
-
+    document.getElementById('firstName').value = '';
+    document.getElementById('lastName').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
 }

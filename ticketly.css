@@ -303,8 +303,7 @@ input::placeholder {
 
 .participants-list {
     margin-bottom: 25px;
-    overflow: scroll;
-    max-height: max-content;
+    overflow-y: scroll;
     display: block;
     display: none;
 }
@@ -339,7 +338,7 @@ input::placeholder {
     color: #888;
 }
 
-.remove-btn {
+.remove {
     background: #ff4444;
     color: white;
     border: none;
@@ -348,12 +347,8 @@ input::placeholder {
     font-size: 12px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
-.remove-btn:hover {
-    background: #cc0000;
-}
 
 .button-group {
     display: flex;
@@ -461,12 +456,6 @@ input::placeholder {
     color: #1a1a1a;
 }
 
-.summary-title {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: #1a1a1a;
-}
 
 .summary-detail {
     display: flex;
@@ -516,8 +505,9 @@ input::placeholder {
 }
 
 .total-amount {
-    color: #00c853;
-    font-size: 24px;
+    color: #10B981;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 .participant-details {
@@ -536,6 +526,123 @@ input::placeholder {
     background-color: #cccccc;
     cursor: not-allowed;
     opacity: 0.6;
+}
+.summary-container {
+    max-width: 800px;
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.summary-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.section {
+    background: #F3F4F6;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.event-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.detail-row {
+    margin-bottom: 8px;
+    color: #4B5563;
+    font-size: 14px;
+}
+
+.ticket-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.ticket-label {
+    color: #4B5563;
+    font-size: 14px;
+}
+
+.ticket-value {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.participant-card {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.participant-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.total-section {
+    background: #ECFDF5;
+    padding: 20px 25px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.total-label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+.btn-previous {
+    background: #6B7280;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-previous:hover {
+    background: #4B5563;
+}
+
+.btn-confirm {
+    background: #10B981;
+    color: white;
+    flex: 1;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-confirm:hover {
+    background: #059669;
 }
 
 @media (max-width: 600px) {
