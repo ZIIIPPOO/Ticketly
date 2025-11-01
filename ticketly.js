@@ -57,9 +57,9 @@ function decr() {
     }
 }
 
-
+let total;
 function increment_price(){
-    let total = counteur * new_price;
+    total = counteur * new_price;
 
     document.querySelector('.total-price p:nth-child(2)').innerHTML = total + '$';
 }
@@ -87,6 +87,7 @@ function reset()
     counteur = 1;
     i = 0;
     document.querySelector('.add').disabled = false;
+    increment_price();
 }
 let i = 0;
 function addprtc(){
