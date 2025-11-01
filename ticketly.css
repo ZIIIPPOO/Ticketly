@@ -532,6 +532,12 @@ input::placeholder {
     margin-bottom: 4px;
 }
 
+.add:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 @media (max-width: 600px) {
     .steps {
         gap: 20px;

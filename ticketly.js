@@ -85,16 +85,18 @@ function reset()
 {
     document.getElementById('ctrn').innerHTML = 1;
     counteur = 1;
+    i = 0;
+    document.querySelector('.add').disabled = false;
 }
-
+let i = 0;
 function addprtc(){
-   let fname = document.getElementById('firstName').value;
+    let fname = document.getElementById('firstName').value;
     let lname = document.getElementById('lastName').value;
     let email = document.getElementById('email').value;
     let phone = document.getElementById('phone').value;
-    
     let fullname = fname + " " + lname;
-    
+
+
     document.getElementById('pl').innerHTML += `
         <div class="participant-item">
             <div class="participant-info">
@@ -105,6 +107,15 @@ function addprtc(){
             <button onclick="remove()" class="remove-btn">Remove</button>
         </div>
     `;
-    
     document.getElementById('pl').style.display = 'block';
+    i++;
+
+    console.log(i)
+        console.log(counteur)
+
+    if(i === counteur) {
+        document.querySelector('.add').disabled = true;
+        return;
+    }
+
 }
