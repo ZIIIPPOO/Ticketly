@@ -29,7 +29,7 @@ function affichage(i){
         document.querySelectorAll('.ticket-value')[0].innerHTML = counteur;
         document.querySelectorAll('.ticket-value')[1].innerHTML = '$' + new_price;
         document.querySelector('.total-amount').innerHTML = '$' + (counteur * new_price);
-        
+
         document.getElementById('s4').style.display='block';
         document.getElementById('s3').style.display='none';
         
@@ -108,7 +108,10 @@ function addprtc(){
     let phone = document.getElementById('phone').value.trim();
     let fullname = fname + " " + lname;
 
-    
+    if (!fname || !lname) {
+        alert('Please fill in both first name and last name');
+        return;
+    }
     if (!email_regex.test(email)) {
         alert('Please enter a valid email address');
         return;
@@ -142,4 +145,8 @@ function addprtc(){
     document.getElementById('lastName').value = '';
     document.getElementById('email').value = '';
     document.getElementById('phone').value = '';
+}
+
+function msg(){
+    alert('Réservation confirmée 🎉');
 }
