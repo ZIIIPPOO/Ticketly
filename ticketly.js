@@ -1,45 +1,46 @@
 
 
-function affichage(i){
-    if(i == 1)
-    {
-        document.getElementById('s2').style.display='block';
-        document.getElementById('s1').style.display='none';
+function affichage(i) {
+    if (i == 1) {
+        document.getElementById('s2').style.display = 'block';
+        document.getElementById('s1').style.display = 'none';
     }
-    else if(i == 2)
-    {
-        document.getElementById('s2').style.display='none';
-        document.getElementById('s1').style.display='block';
+    else if (i == 2) {
+        document.getElementById('s2').style.display = 'none';
+        document.getElementById('s1').style.display = 'block';
     }
-    else if(i == 3)
-    {
-        document.getElementById('s3').style.display='block';
-        document.getElementById('s2').style.display='none';
+    else if (i == 3) {
+        document.getElementById('s3').style.display = 'block';
+        document.getElementById('s2').style.display = 'none';
     }
-    else if(i == 4)
-    {
-        document.getElementById('s3').style.display='none';
-        document.getElementById('s2').style.display='block';
+    else if (i == 4) {
+        document.getElementById('s3').style.display = 'none';
+        document.getElementById('s2').style.display = 'block';
     }
-    else if(i == 5) {
-        document.getElementById('s4').style.display='none';
-        document.getElementById('s3').style.display='block';
+    else if (i == 5) {
+        document.getElementById('s4').style.display = 'none';
+        document.getElementById('s3').style.display = 'block';
+        document.getElementById('firstName').value = '';
+        document.getElementById('lastName').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('phone').value = '';
+        remove();
     }
-    else if(i == 6) {
+    else if (i == 6) {
         document.querySelectorAll('.ticket-value')[0].innerHTML = counteur;
         document.querySelectorAll('.ticket-value')[1].innerHTML = '$' + new_price;
         document.querySelector('.total-amount').innerHTML = '$' + (counteur * new_price);
 
-        document.getElementById('s4').style.display='block';
-        document.getElementById('s3').style.display='none';
-        
+        document.getElementById('s4').style.display = 'block';
+        document.getElementById('s3').style.display = 'none';
+
     }
 }
 let new_price = 0;
 let nb_of_seats = 0;
-function store(button){
+function store(button) {
     const div = button.parentElement;
-    
+
     const title = div.querySelector('h2').innerHTML;
     const date = div.querySelector('.infos p:nth-child(1)').innerHTML;
     const location = div.querySelector('.infos p:nth-child(2)').innerHTML;
@@ -55,42 +56,40 @@ function store(button){
 
     document.querySelector('.event-name').innerHTML = title;
     document.querySelector('.detail-row').innerHTML = date + '<br>' + location + '<br>' + seats;
-    
+
 }
-let counteur =1;
+let counteur = 1;
 function ctr() {
     console.log(nb_of_seats);
-    if(counteur < nb_of_seats){
-    counteur++
-    document.getElementById('ctrn').innerHTML=counteur
+    if (counteur < nb_of_seats) {
+        counteur++
+        document.getElementById('ctrn').innerHTML = counteur
     }
 }
 function decr() {
-    if(counteur > 1)
-    {
-    counteur--;
-    document.getElementById('ctrn').innerHTML=counteur;
-    increment_price();
+    if (counteur > 1) {
+        counteur--;
+        document.getElementById('ctrn').innerHTML = counteur;
+        increment_price();
     }
 }
 
 let total;
-function increment_price(){
+function increment_price() {
     total = counteur * new_price;
 
     document.querySelector('.total-price p:nth-child(2)').innerHTML = total + '$';
 }
 
-function remove(){
+function remove() {
     document.getElementById('pl').innerHTML = '';
-    document.getElementById('pl').style.display='none';
+    document.getElementById('pl').style.display = 'none';
     i = 0;
     document.querySelector('.add').disabled = false;
     document.querySelector('#button').disabled = true;
 }
 
-function reset()
-{
+function reset() {
     document.getElementById('ctrn').innerHTML = 1;
     counteur = 1;
     i = 0;
@@ -101,9 +100,9 @@ function reset()
 let i = 0;
 const email_regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 const phone_regex = /^(\+2126\d{8}|06\d{8})$/
-function addprtc(){
-    let fname = document.getElementById('firstName').value;
-    let lname = document.getElementById('lastName').value;
+function addprtc() {
+    let fname = document.getElementById('firstName').value.trim();
+    let lname = document.getElementById('lastName').value.trim();
     let email = document.getElementById('email').value.trim();
     let phone = document.getElementById('phone').value.trim();
     let fullname = fname + " " + lname;
@@ -130,15 +129,24 @@ function addprtc(){
             <button onclick="remove()" class="remove">remove</button>
         </div>
     `;
+    document.getElementById('participants-summary').innerHTML += `
+        <div class="participant-item">
+            <div class="participant-info">
+                <h4>${fullname}</h4>
+                <p>${email}</p>
+                <p>${phone}</p>
+            </div>
+        </div>
+    `;
     document.getElementById('pl').style.display = 'block';
     i++;
 
     console.log(i)
-        console.log(counteur)
+    console.log(counteur)
 
-    if(i === counteur) {
+    if (i === counteur) {
         document.querySelector('.add').disabled = true;
-        document.querySelector('#button').disabled = false; 
+        document.querySelector('#button').disabled = false;
         return;
     }
     document.getElementById('firstName').value = '';
@@ -147,6 +155,6 @@ function addprtc(){
     document.getElementById('phone').value = '';
 }
 
-function msg(){
+function msg() {
     alert('Réservation confirmée 🎉');
 }

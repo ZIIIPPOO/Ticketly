@@ -88,7 +88,7 @@
                 <div class="infos">
                     <p>📆 June 20, 2026</p>
                     <p>🗺️ Youcode, Youssoufia</p>
-                    <p class="seats">💺 <span>50</span> seats available</p>
+                    <p class="seats">💺 <span>30</span> seats available</p>
                     <p class="price">20$</p>
                 </div>
                 <button onclick="affichage(1); store(this)" class="book">Book</button>
@@ -99,7 +99,7 @@
                 <div class="infos">
                     <p>📆 30 May, 2026</p>
                     <p>🗺️ Puskás Aréna, Hungary</p>
-                    <p class="seats">💺<span>10</span> seats available</p>
+                    <p class="seats">💺<span>50000</span> seats available</p>
                     <p class="price">500$</p>
                 </div>
                 <button onclick="affichage(1); store(this)" class="book">Book</button>
@@ -282,9 +282,11 @@
                 <span class="total-amount">$911</span>
             </div>
 
-            <div class="button-group">
-                <button class="btn btn-previous" onclick="affichage(5)">Previous</button>
-                <button onclick="msg()" class="btn btn-confirm">Confirm Reservation</button>
+
+
+            <div class="prev-con">
+                <button onclick="affichage(5) ; reset()">Previous</button>
+                <button class="confirmer" onclick="affichage(6); msg()">Confirmer la réservation</button>
             </div>
         </div>
     </section>
