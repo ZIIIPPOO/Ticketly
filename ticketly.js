@@ -26,8 +26,13 @@ function affichage(i){
         document.getElementById('s3').style.display='block';
     }
     else if(i == 6) {
+        document.querySelectorAll('.ticket-value')[0].innerHTML = counteur;
+        document.querySelectorAll('.ticket-value')[1].innerHTML = '$' + new_price;
+        document.querySelector('.total-amount').innerHTML = '$' + (counteur * new_price);
+        
         document.getElementById('s4').style.display='block';
         document.getElementById('s3').style.display='none';
+        
     }
 }
 let new_price = 0;
@@ -47,6 +52,9 @@ function store(button){
     document.querySelector('.selected-event h2').innerHTML = title;
     document.querySelector('.selected-event div p').innerHTML = date + '<br>' + location + '<br>' + seats + '<br>' + price;
     document.querySelector('.total-price p:nth-child(2)').innerHTML = price;
+
+    document.querySelector('.event-name').innerHTML = title;
+    document.querySelector('.detail-row').innerHTML = date + '<br>' + location + '<br>' + seats;
     
 }
 let counteur =1;

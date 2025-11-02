@@ -99,7 +99,7 @@
                 <div class="infos">
                     <p>📆 30 May, 2026</p>
                     <p>🗺️ Puskás Aréna, Hungary</p>
-                    <p class="seats">💺<span>10</span>  seats available</p>
+                    <p class="seats">💺<span>10</span> seats available</p>
                     <p class="price">500$</p>
                 </div>
                 <button onclick="affichage(1); store(this)" class="book">Book</button>
@@ -111,7 +111,7 @@
                     <p>📆 June 20, 2026</p>
                     <p>🗺️ Pathé , Casablanca</p>
                     <p class="seats">💺 <span>200</span> seats available</p>
-                    <p  class="price">20$</p>
+                    <p class="price">20$</p>
                 </div>
                 <button onclick="affichage(1); store(this)" class="book">Book</button>
             </div>
@@ -164,133 +164,130 @@
             </div>
         </div>
     </section>
-        <section id="s3" class="step hidden">
-            <header class="steps">
-                <div class="text-step">
-                    <p>1</p>
-                    <h4>Select Event</h4>
-                </div>
-                <img height="4" src="images/Container.png" alt="">
-                <div class="text-step">
-                    <p>2</p>
-                    <h4>Choose Tickets</h4>
-                </div>
-                <img height="4" src="images/Container.png" alt="">
-                <div class="text-step">
-                    <div class="current-page">
-                        <p>3</p>
-                        <h4>Add Participants</h4>
-                    </div>
-                </div>
-                <img height="4" src="images/Container.png" alt="">
-                <div class="text-step">
-                    <p>4</p>
-                    <h4>Confirm Booking</h4>
-                </div>
-            </header>
-            <div class="card">
-                <h2 class="card-title">Add Participant Information</h2>
-
-                <div class="form-section">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" placeholder="First Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" placeholder="Last Name">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="youcode@gmail.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" placeholder="+2126XXXXXXXX">
-                        </div>
-                    </div>
-                </div>
-
-                <div id="pl" class="participants-list">
-                </div>
-
-                <div class="prev-con">
-                    <button onclick="affichage(4) ; reset()">Previous</button>
-                    <button id="button" onclick="affichage(6)" disabled>Continue</button>
-                    <button onclick="addprtc()" class="add">Add</button>
+    <section id="s3" class="step hidden">
+        <header class="steps">
+            <div class="text-step">
+                <p>1</p>
+                <h4>Select Event</h4>
+            </div>
+            <img height="4" src="images/Container.png" alt="">
+            <div class="text-step">
+                <p>2</p>
+                <h4>Choose Tickets</h4>
+            </div>
+            <img height="4" src="images/Container.png" alt="">
+            <div class="text-step">
+                <div class="current-page">
+                    <p>3</p>
+                    <h4>Add Participants</h4>
                 </div>
             </div>
-        </section>
-        <section id="s4" class="step hidden">
-    <header class="steps">
-        <div class="text-step">
-            <p>1</p>
-            <h4>Select Event</h4>
-        </div>
-        <img height="4" src="images/Container.png" alt="">
-        <div class="text-step">
-            <p>2</p>
-            <h4>Choose Tickets</h4>
-        </div>
-        <img height="4" src="images/Container.png" alt="">
-        <div class="text-step">
-            <p>3</p>
-            <h4>Add Participants</h4>
-        </div>
-        <img height="4" src="images/Container.png" alt="">
-        <div class="text-step">
-            <div class="current-page">
+            <img height="4" src="images/Container.png" alt="">
+            <div class="text-step">
                 <p>4</p>
+                <h4>Confirm Booking</h4>
             </div>
-            <h4>Confirm Booking</h4>
-        </div>
-    </header>
+        </header>
+        <div class="card">
+            <h2 class="card-title">Add Participant Information</h2>
 
-    <div class="summary-container">
-        <h1 class="summary-title">Booking Summary</h1>
-
-        <div class="section">
-            <h2 class="section-title">Event Details</h2>
-            <div class="event-name">UCL FINAL</div>
-            <div class="detail-row">
-                <span>📅 Thursday, June 20, 2026</span>
+            <div class="form-section">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="youcode@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="+2126XXXXXXXX">
+                    </div>
+                </div>
             </div>
-            <div class="detail-row">
-                <span>📍 Youcode, Youssoufia</span>
+
+            <div id="pl" class="participants-list">
+            </div>
+
+            <div class="prev-con">
+                <button onclick="affichage(4) ; reset()">Previous</button>
+                <button id="button" onclick="affichage(6)" disabled>Continue</button>
+                <button onclick="addprtc()" class="add">Add</button>
             </div>
         </div>
-
-        <div class="section">
-            <h2 class="section-title">Ticket Information</h2>
-            <div class="ticket-info">
-                <span class="ticket-label">👥 Number of Tickets:</span>
-                <span class="ticket-value">1</span>
+    </section>
+    <section id="s4" class="step hidden">
+        <header class="steps">
+            <div class="text-step">
+                <p>1</p>
+                <h4>Select Event</h4>
             </div>
-            <div class="ticket-info">
-                <span class="ticket-label">💵 Price per Ticket:</span>
-                <span class="ticket-value">$911</span>
+            <img height="4" src="images/Container.png" alt="">
+            <div class="text-step">
+                <p>2</p>
+                <h4>Choose Tickets</h4>
+            </div>
+            <img height="4" src="images/Container.png" alt="">
+            <div class="text-step">
+                <p>3</p>
+                <h4>Add Participants</h4>
+            </div>
+            <img height="4" src="images/Container.png" alt="">
+            <div class="text-step">
+                <div class="current-page">
+                    <p>4</p>
+                </div>
+                <h4>Confirm Booking</h4>
+            </div>
+        </header>
+
+        <div class="summary-container">
+            <h1 class="summary-title">Booking Summary</h1>
+
+            <div class="section">
+                <h2 class="section-title">Event Details</h2>
+                <div class="event-name">UCL FINAL</div>
+                <div class="detail-row">
+                    <span>📅 Thursday, June 20, 2026</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Ticket Information</h2>
+                <div class="ticket-info">
+                    <span class="ticket-label">👥 Number of Tickets:</span>
+                    <span id="t-v" class="ticket-value">1</span>
+                </div>
+                <div class="ticket-info">
+                    <span class="ticket-label">💵 Price per Ticket:</span>
+                    <span class="ticket-value">$911</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Participants</h2>
+                <div id="participants-summary"></div>
+            </div>
+
+            <div class="total-section">
+                <span class="total-label">Total Amount</span>
+                <span class="total-amount">$911</span>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-previous" onclick="affichage(5)">Previous</button>
+                <button class="btn btn-confirm">Confirm Reservation</button>
             </div>
         </div>
-
-        <div class="section">
-            <h2 class="section-title">Participants</h2>
-            <div id="participants-summary"></div>
-        </div>
-
-        <div class="total-section">
-            <span class="total-label">Total Amount</span>
-            <span class="total-amount">$911</span>
-        </div>
-
-        <div class="button-group">
-            <button class="btn btn-previous" onclick="affichage(5)">Previous</button>
-            <button class="btn btn-confirm">Confirm Reservation</button>
-        </div>
-    </div>
-</section>
+    </section>
 </body>
 
 </html>
